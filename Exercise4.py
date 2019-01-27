@@ -1,5 +1,6 @@
 sequence = str(input("Introduce the sequence: "))
 sequence = sequence.upper()
+sequence = sequence.replace(" ", "").replace("\n", "")
 tot_len = len(sequence)
 A = sequence.count("A")
 C = sequence.count("C")
