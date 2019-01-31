@@ -1,0 +1,15 @@
+# Program for counting the number of bases presented in a DNA sequence.
+
+sequence = str(input("Introduce the sequence: "))
+sequence = sequence.upper()
+sequence = sequence.replace(" ", "").replace("\n", "")
+tot_len = len(sequence)
+A = sequence.count("A")
+C = sequence.count("C")
+T = sequence.count("T")
+G = sequence.count("G")
+print("Total length: {}".format(tot_len))
+print("A: {}".format(A))
+print("C: {}".format(C))
+print("T: {}".format(T))
+print("G: {}".format(G))
