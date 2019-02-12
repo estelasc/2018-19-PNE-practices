@@ -1,0 +1,54 @@
+Here you will take your notes:
+
+If there is no server, then you have a problem, but if there is a server but not clients, there is no problem.
+Once you have the server, then the client can work after executing. In a computer we have many programs, not only one.
+And there may be more than one servers in a computer as well.
+
+For testing, not always we have more than one computer, but we can have one computer running the server and the client
+although it might be confused. However, at first we are going to communicate computers that are physically separated.
+
+Internet. Client and server are connected through a network called internet that allows us to communicate different
+programs easily, but it is actually very complex. Inside the internet, there are many isolated computers that are
+connected one to each other and they are divided in groups or networks. If we want to send a message from the client to
+the server, we have to identify both machines. IP address is the Network interface, which is the number of computers
+connected to it. IP address can change dependion on the computer you will connect. You send the messages and then they
+arrive to the place we wanted them to go thanks to the internet, which is amazing.
+
+My phone IP address at URJC is: 10.0.54.79
+My computer lab IP address at URJC is: 212.128.253.70
+Teacher's IP address at URJC is: 212.128.253.64
+
+There is a command called ping for asking the computer if it is alive.
+
+* Ping time to 8.8.8.8:
+time=3.24
+
+* Ping time to my computer: time=0.063 ms (63us)
+
+* Ping time to a computer in the same network:
+time=0.636 ms (636us)
+
+* Ping time to my mobile phone: time=6.60 ms
+
+An URL identify a computer interface for humans. For example, www.google.com. The browser connects to the DNS and give
+you the IP address.
+
+Ping to www.google.com:
+216.58.211.228
+
+Ping to www.urjc.es:
+212.128.240.50
+
+We need the IP address for communicating with other machines. We use the port in order to identify any of the available
+applications that can communicate. If I want to connect with an specific server of a machine I need to specify it and we
+will connect only with the server we want. If you do not specify the port, then the connection will not be possible.
+
+The model for sending messages from the client to the server is similar to a file.
+
+For reading the file and even write it, you must create an object and then call the file to be written or read. For
+communication is exactly the same
+
+THIS IS A TEXT EXAMPLE FOR ADDING INFORMATION TO MY FILE
+
+Sockets are a kind of objects that we use for communicating applications. The first thing I have to do if I want to
+create a client, I have to run a server because if there is no server, I cannot execute the client.
