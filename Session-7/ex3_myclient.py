@@ -12,10 +12,17 @@ IP = "192.168.1.34"
 # Connect to the server
 s.connect((IP, PORT))
 
-mess = input("Write your message: ")
-s.send(str.encode(mess))
+ok = True
+while ok:
+    mess = input("Write your message: ")
+    s.send(str.encode(mess))
 
-msg = s.recv(2048).decode("utf-8")
-print("MESSAGE FROM THE SERVER: {}".format(msg))
+    msg = s.recv(2048).decode("utf-8")
+    print("MESSAGE FROM THE SERVER: {}".format(msg))
+
+    Exit = input("If you want to finish the chat, write 'yes': ")
+    Exit = Exit.replace(" ", "").lower()
+    if Exit == 'yes':
+        ok = False
 
 s.close()
