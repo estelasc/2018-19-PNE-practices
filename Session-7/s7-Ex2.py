@@ -1,24 +1,21 @@
 # We are programming a client for connecting to the teacher's server.
-# I know there is an error here that I must fix, but I don't know how to do it right know. I will fix it soon.
 
 import socket
 
-# Create a socker for communication with the server
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-print("Socket created")
 
 PORT = 9797
-IP = "192.168.1.34"
-
-# Connect to the server
-s.connect((IP, PORT))
+IP = "212.128.253.69"
 
 
 Chat = True
 while Chat:
 
-    # Why when I send the third message to the server, it stop working (BrokenPipeError)???
+    # Create a socker for communication with the server
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+    # Connect to the server
+    s.connect((IP, PORT))
+
     mess = input("Enter the message you want to send to the teacher's server: ")
     s.send(str.encode(mess))
 
@@ -31,7 +28,7 @@ while Chat:
     Exit = Exit.replace(" ", "")
     if Exit == "yes":
         Chat = False
+    s.close()
 
 
-s.close()
 print("The chat has finished.")
