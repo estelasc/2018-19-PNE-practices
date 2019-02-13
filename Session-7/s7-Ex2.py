@@ -1,4 +1,4 @@
-# We are programming our first clientç
+# We are programming a client for connecting to the teacher's server.
 # I know there is an error here that I must fix, but I don't know how to do it right know. I will fix it soon.
 
 import socket
