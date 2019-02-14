@@ -2,15 +2,13 @@
 from Seq import Seq
 
 se1 = input("Please, enter the first sequence: ")
-se1 = se1.upper()
+se1 = se1.upper()  # In order to avoid errors if the user enter the sequence lowercase.
 s1 = Seq(se1)
 se2 = input("Please, enter the second sequence: ")
-se2 = se2.upper()
+se2 = se2.upper()  # In order to avoid errors if the user enter the sequence lowercase.
 s2 = Seq(se2)
-txt_comps1 = s1.complement()
-s3 = Seq(txt_comps1)
-txt_rev3 = s3.reverse()
-s4 = Seq(txt_rev3)
+s3 = s1.complement()
+s4 = s3.reverse()
 
 
 def print_info(num_seq, dna):

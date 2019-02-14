@@ -19,11 +19,13 @@ class Seq:
                 comp_chain += bas_dict['C']
             elif basis == 'G':
                 comp_chain += bas_dict['G']
-        return comp_chain
+        comp_seq = Seq(comp_chain)
+        return comp_seq
 
     def reverse(self):
         rev_chain = self.strbase[::-1]
-        return rev_chain
+        reverse = Seq(rev_chain)
+        return reverse
 
     def count(self, base):
         counter = self.strbase.count(base)
