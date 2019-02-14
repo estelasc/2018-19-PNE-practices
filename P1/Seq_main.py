@@ -1,3 +1,6 @@
+# This program takes two DNA sequence entered by the user and calculates the complement of the first sequence introduced
+# creating a third sequence and the reverse of the third sequence, creating a forth one. Then it print each of the
+# sequences, their length, and the number and percentage of each base they contain.
 # Main program
 from Seq import Seq
 
@@ -12,6 +15,7 @@ s4 = s3.reverse()
 
 
 def print_info(num_seq, dna):
+    """Function for printing the information of each DNA sequence."""
     print("Sequence {}:".format(num_seq), dna.strbase)
     print("Length: {}".format(dna.len()))
     print("Bases count:", "A:{},".format(dna.count('A')), "T:{},".format(dna.count('T')),
