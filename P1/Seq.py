@@ -1,3 +1,7 @@
+# This is a file that contains a class that is able to analyze any DNA sequence. It will be called from another file
+# that need it.
+
+
 class Seq:
     """A class for analyzing DNA sequences"""
     def __init__(self, strbase):
