@@ -1,3 +1,7 @@
+# This is a file that contains a class that is able to analyze any DNA sequence. It will be called from another file
+# that need it.
+
+
 class Seq:
     """A class for analyzing DNA sequences"""
     def __init__(self, strbase):
@@ -19,7 +23,8 @@ class Seq:
                 comp_chain += bas_dict['C']
             elif basis == 'G':
                 comp_chain += bas_dict['G']
-        return comp_chain
+        comp_seq = Seq(comp_chain)
+        return comp_seq
 
     def reverse(self):
         rev_chain = self.strbase[::-1]

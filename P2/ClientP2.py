@@ -1,14 +1,13 @@
+# This is a client that will ask the user for a DNA sequence. Then thanks to the class Seq that is in other file,
+# it will calculate the reverse of the original sequence and the complement of the reverse of the original sequence.
+# Then it will sent all three sequences to the server.
 from SeqP1 import Seq
 import socket
 
 Port = 5015
-IP = "212.128.253.69"
+IP = "192.168.1.34"
 
-chain = input("Please, enter a valid DNA sequence: ")
-orig_seq = Seq(chain)
-seq2 = orig_seq.reverse()
-seq3 = seq2.complement()
-print(orig_seq.strbase)
+
 run = True
 while run:
 
@@ -19,14 +18,12 @@ while run:
     s.connect((IP, Port))
 
     chain = input("Please, enter a valid DNA sequence: ")
-    orig_seq = Seq(chain)
-    seq2 = orig_seq.reverse()
+    seq1 = Seq(chain)
+    seq2 = seq1.reverse()
     seq3 = seq2.complement()
 
-
-
     s.send(str.encode("The original sequence is: {}, the reverse of the original sequence is: {}, and the complement of"
-                      " the reverse sequence is: {}".format(chain, seq2, seq3)))
+                      " the reverse sequence is: {}".format(seq1.strbase, seq2.strbase, seq3.strbase)))
 
     msg = s.recv(2048).decode("utf-8")
     print("Message from the server: {}".format(msg))
