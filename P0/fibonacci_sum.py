@@ -1,7 +1,7 @@
 print("Program for calculating the sum of the n first numbers of the fibonacci series.")
 
 
-def fibonacci(n):
+def fibonaccis(n):
     serie_fibonacci = [0, 1]
 
     for element in serie_fibonacci:
@@ -15,7 +15,7 @@ def fibonacci(n):
 def sum_fibonacci(n):
     tot_sum = 0
     for i in range(n):
-        tot_sum = fibonacci(i+1) + tot_sum
+        tot_sum = fibonaccis(i+1) + tot_sum
     return tot_sum
 
 
