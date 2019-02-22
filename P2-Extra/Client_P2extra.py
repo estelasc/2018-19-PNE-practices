@@ -1,3 +1,5 @@
+# This is a client that ask the user for a DNA sequence. Then it will send this sequence to the server that must return
+# the complement of that sequence.
 import socket
 
 Port = 3000
@@ -13,8 +15,10 @@ while not_exit:
     # Now, we connect to the server
     s.connect((IP, Port))
 
+    # Here we ask for a DNA sequence
     chain = input("Please, enter a valid DNA sequence: ")
 
+    # Then we send the message to the server
     s.send(str.encode(chain))
 
     msg = s.recv(2048).decode("utf-8")

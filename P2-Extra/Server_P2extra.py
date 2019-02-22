@@ -1,3 +1,4 @@
+# This is a server that returns to the client the complement of the DNA sequence that it has sent
 import socket
 from SequP1 import Seq
 
