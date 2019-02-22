@@ -1,3 +1,4 @@
+# This is a server that receives a message from the client and say that this message has been received successfully
 import socket
 
 # Configure the Server's IP and PORT
