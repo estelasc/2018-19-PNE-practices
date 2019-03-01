@@ -1,3 +1,7 @@
+# This is the server for practice 4. While this server is running, the user will put in the browser the IP and PORT
+# that connect it to this server. Depending on what it introduces to the browser, it will open the index, pink, blue or
+# error file.
+
 import socket
 import termcolor
 
