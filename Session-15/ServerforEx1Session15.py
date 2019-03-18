@@ -10,10 +10,20 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
 
         # -- Printing the request line
-        termcolor.cprint(self.requestline, 'blue')
+        reqpath = self.path
+        termcolor.cprint(reqpath, 'blue')
 
-        f = open("formforex1.html", 'r')
-        contents = f.read()
+        if reqpath.startswith('/echo?msg='):
+            resp = reqpath[10:]
+            f = open('responseforex1form.html', 'r')
+            contents = f.read()
+            contents = contents.replace('##', resp).replace('+', ' ')
+        elif reqpath == '/' or reqpath == '/echo':
+            f = open("formforex1.html", 'r')
+            contents = f.read()
+        else:
+            f = open('error.html', 'r')
+            contents = f.read()
 
         self.send_response(200)
 
