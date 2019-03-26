@@ -1,0 +1,5 @@
+protocol: HTTPS
+hostname: aws.random.cat
+Endpoint: /meow
+Method: GET
+Data: application/json
