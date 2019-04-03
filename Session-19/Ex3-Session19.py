@@ -63,11 +63,12 @@ for info in repositories:
     rep = info['name']
     list_repos += rep + '\n'
 
-GITHUB_ID3 = GITHUB_ID2 + '/2018-19-PNE-practices/contributors'
+ENDPOINT2 = '/repos/'
+GITHUB_ID3 = GITHUB_ID + '/2018-19-PNE-practices/contributors'
 
 # -- Send the request. No body (None)
 # -- Use the defined headers
-conn.request(METHOD, ENDPOINT + GITHUB_ID3, None, headers)
+conn.request(METHOD, ENDPOINT2 + GITHUB_ID3, None, headers)
 
 # -- Wait for the server's response
 r3 = conn.getresponse()
@@ -83,8 +84,10 @@ conn.close()
 
 # -- Generate the object from the json file
 commits = json.loads(text_json3)
+contributions = commits[0]['contributions']
 
 
 print()
-print("Name: {}".format(name))
+print("Name: {}\n".format(name))
 print('Repos: \n{}'.format(list_repos))
+print("The total number of commits to the 2018-19-PNE-repo is", contributions)
